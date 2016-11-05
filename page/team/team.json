@@ -1,6 +1,6 @@
 {
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "green",
+  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "我的团队",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",

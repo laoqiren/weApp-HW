@@ -3,5 +3,9 @@
   <input class="search" placeholder="搜索" placeholder-style="color:black"/>
 </view>
 
+<button bindtap="selectImage">提取图片</button>
+<button bindtap="downImage">下载图片</button>
+<image src="{{image}}" style="width:200px;height:200px"/>
 
 <navigator url="/page/chat/chat?title=navigate">跳转到聊天室</navigator>
+<view wx:for="{{teams}}" wx:for-item="team">{{team.name}}:{{team.content}}</view>

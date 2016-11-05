@@ -1,44 +1,57 @@
 Page({
     data:{
         text:'hello, my team!',
-        teams:[{
-            name:'杭电麻花',
-            intro:"杭电麻花好棒棒的哦哦哦哦哦"
-        },
-        {
-            name:'杭电麻花',
-            intro:"杭电麻花好棒棒的哦哦哦哦哦"
-        },
-        {
-            name:'杭电麻花',
-            intro:"杭电麻花好棒棒的哦哦哦哦哦"
-        },
-        {
-            name:'杭电麻花',
-            intro:"杭电麻花好棒棒的哦哦哦哦哦"
-        },
-        {
-            name:'杭电麻花',
-            intro:"杭电麻花好棒棒的哦哦哦哦哦"
-        }],
-        showLove:true,
-        new1:{
-            title:'微信小程序By HW来了',
-            content:'嗯，我们正在开发'
-        }
+        teams:[]
     },
     onLoad(options){
-
+        var that = this;
+        wx.request({
+            url:'http://localhost:3000/teams',
+            success(res){
+                console.log(res.data.teams);
+                that.setData({
+                    teams:res.data.teams
+                })
+            }
+        })
     },
     onPullDownRefreash(){
         this.setData({
             text:'hello, new text'
         })
     },
-    viewtap(){
-        console.log("hello")
-        this.setData({
-            text:"I'm tapped"
+    downImage(){
+        var that = this;
+        wx.downloadFile({
+            url:"http://localhost:3000/images",
+            success(res){
+                console.log(res.tempFilePath);
+                that.setData({
+                    image:res.tempFilePath
+                })
+            }
+        })
+    },
+    selectImage(){
+        console.log("提取图片")
+        wx.chooseImage({
+            success(res){
+                var tempFiles = res.tempFilePaths;
+                console.log(tempFiles);
+                wx.uploadFile({
+                    url:"http://localhost:3000/images",
+                    filePath:tempFiles[0],
+                    name:'file',
+                    formData:{
+                        'user':'luoxia'
+                    },
+                    success(res){
+                        if(res.status==200){
+                            console.log("发送图片成功")
+                        }
+                    }
+                })
+            }
         })
     }
 })

@@ -1,3 +1,8 @@
 <view>
     hello, welcome to chat room   :{{title}}
 </view>
+
+<form bindsubmit="formsubmit">
+    <input name="content"/>
+    <button formType="submit">发送</button>
+</form>
