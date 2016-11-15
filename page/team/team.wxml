@@ -1,7 +1,0 @@
-<view class="header">
-  <icon class="search-icon" type="search" size="20"/>
-  <input class="search" placeholder="搜索" placeholder-style="color:black"/>
-</view>
-
-
-<navigator url="/page/chat/chat?title=navigate">跳转到聊天室</navigator>

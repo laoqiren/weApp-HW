@@ -1,3 +1,0 @@
-<view>
-    hello, welcome to chat room   :{{title}}
-</view>
