@@ -1,14 +1,17 @@
 const http = require("http");
-const ws = require("nodejs-websocket");
+const ws = require("ws");
 
-var server = ws.createServer(function(conn){
-    console.log("new connetion");
-    conn.on("text",function(str){
-        console.log("来自WeApp的聊天内容:"+str);
-        conn.sendText(str,function(){
-            console.log("向客户端回应")
-        })
+var httpServer = http.createServer();
+httpServer.listen(8066,"localhost");
+
+var chat = new ws.Server({server:httpServer,path:'/chat'});
+
+chat.on("connection",function(ws){
+    console.log("来自客户端的websocket连接");
+    ws.on("message",function(message){
+        console.log(message);
+        ws.send(message);
     })
-}).listen(8081);
+});
 
-console.log("websocket server at 8081")
+console.log("websocket server at 8066")

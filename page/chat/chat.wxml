@@ -6,3 +6,4 @@
     <input name="content"/>
     <button formType="submit">发送</button>
 </form>
+<view wx:for="{{messages}}" wx:for-item="message">{{message}}</view>

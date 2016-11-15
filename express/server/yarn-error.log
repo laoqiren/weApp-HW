@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add --dev ws
+
+PATH: 
+  C:\Users\Administrator\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Administrator\bin;C:\Ruby22-x64\bin;C:\Program Files\Java\jdk1.8.0_73\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;%NODE_HOME%;C:\MinGW\bin;C:\ProgramData\chocolatey\bin;C:\tools\python2;C:\Users\Administrator\AppData\Local\Android\sdk\tools;C:\Users\Administrator\AppData\Local\Android\sdk\platform-tools;D:\phpStudy\php70n;F:\mongodb\bin;C:\Program Files\nodejs;C:\Users\Administrator\AppData\Local\atom\bin;D:\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Android\sdk\platform-tools;C:\Program Files\LLVM\bin;C:\tools\python2;C:\Users\Administrator\AppData\Local\Android\sdk\tools;C:\Users\Administrator\AppData\Local\Android\sdk\platform-tools;D:\phpStudy\php70n;C:\Users\Administrator\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  0.16.1
+
+Node version: 
+  6.9.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "node ./bin/www"
+    },
+    "dependencies": {
+      "body-parser": "~1.15.1",
+      "cookie-parser": "~1.4.3",
+      "debug": "~2.2.0",
+      "express": "~4.13.4",
+      "express-ws": "^2.0.0",
+      "jade": "~1.11.0",
+      "morgan": "~1.7.0",
+      "serve-favicon": "~2.3.0",
+      "socket.io": "^1.5.1"
+    },
+    "devDependencies": {
+      "multiparty": "^4.1.2",
+      "ws": "^1.1.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+bower manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir 'E:\luoxia\front-end\front_end_\weapp\express\server\node_modules\body-parser'
+      at Error (native)

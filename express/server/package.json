@@ -9,7 +9,7 @@
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
-    "express": "~4.13.4",
+    "express": "^4.14.0",
     "express-ws": "^2.0.0",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
@@ -17,6 +17,7 @@
     "socket.io": "^1.5.1"
   },
   "devDependencies": {
-    "multiparty": "^4.1.2"
+    "multiparty": "^4.1.2",
+    "ws": "^1.1.1"
   }
 }

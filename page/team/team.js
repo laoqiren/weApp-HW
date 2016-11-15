@@ -28,7 +28,7 @@ Page({
                 console.log(res.tempFilePath);
                 that.setData({
                     image:res.tempFilePath
-                })
+                });
             }
         })
     },

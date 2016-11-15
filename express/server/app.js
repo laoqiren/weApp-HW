@@ -9,7 +9,8 @@ var teams = require("./routes/teams");
 var images = require("./routes/images");
 
 var app = express();
-var expressWs = require("express-ws")(app);
+//var expressWs = require("express-ws")(app);
+//app = expressWs.app;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -32,9 +33,9 @@ app.use("/teams",teams);
 app.use("/images",images);
 //var webso = require("./routes/ws");
 //app.use("/chat",webso);
-app.ws("/chat",function(ws,req){
-  console.log("来自weapp的websocket连接")
-})
+//app.ws("/chat",function(ws,req){
+  //console.log("来自weapp的websocket连接")
+//})
 //app.use("/chat",webso);
 
 // catch 404 and forward to error handler

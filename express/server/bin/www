@@ -5,13 +5,13 @@
  */
 
 var app = require('../app');
+//var websocketServer = require("ws").Server;
 var debug = require('debug')('server:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
-
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -20,7 +20,19 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
-
+var wss = new require("ws").Server({server:server,path:'/chat'});
+wss.on("connection",function(ws){
+  console.log("来自客户端的websocket请求");
+  ws.on("message",function(message){
+    console.log(message);
+    ws.send(message);
+  })
+})
+/*
+var wss = new websocketServer({server:server});
+wss.on("connection",function(ws){
+  console.log("weapp ws connection")
+})*/
 /**
  * Listen on provided port, on all network interfaces.
  */
@@ -89,4 +101,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log(`The server has been listened at port:${app.get('port')}`)
 }

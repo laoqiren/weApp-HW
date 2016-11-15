@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "node-segment": "^0.0.2"
+  }
+}
