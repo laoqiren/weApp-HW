@@ -1,1 +1,4 @@
 *swp
+/node_modules/
+/express/server/node_modules/
+/express/websocket/node_modules/
