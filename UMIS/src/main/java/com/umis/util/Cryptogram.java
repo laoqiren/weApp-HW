@@ -2,7 +2,7 @@ package com.umis.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-/*
+
 public class Cryptogram {
     public static String SHA1(String decript) {
         try {
@@ -54,4 +54,3 @@ public class Cryptogram {
     }
 
 }
-*/

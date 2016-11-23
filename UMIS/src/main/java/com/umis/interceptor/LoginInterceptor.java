@@ -1,5 +1,5 @@
 package com.umis.interceptor;
-/*
+
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,16 +30,15 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-//		TokenManager tokenManager = TokenManager.getInstance();
-//        String token = httpServletRequest.getHeader("Access_Token");
-//        if (tokenManager.isTokenValid(token))
-//            return true;
-//        httpServletResponse.addHeader("Content-Type", "application/json;charset=UTF-8");
-//        PrintWriter printWriter = httpServletResponse.getWriter();
-//        printWriter.append(new JsonError(ExceptionCode.Invalid_Token, "Invalid Access_Token").toJsonString());
-//        printWriter.close();
+		TokenManager tokenManager = TokenManager.getInstance();
+        String token = httpServletRequest.getHeader("Access_Token");
+        if (tokenManager.isTokenValid(token))
+            return true;
+        httpServletResponse.addHeader("Content-Type", "application/json;charset=UTF-8");
+        PrintWriter printWriter = httpServletResponse.getWriter();
+        printWriter.append(new JsonError(ExceptionCode.Invalid_Token, "Invalid Access_Token").toJsonString());
+		  printWriter.close();
         return true;
 	}
 
 }
-*/

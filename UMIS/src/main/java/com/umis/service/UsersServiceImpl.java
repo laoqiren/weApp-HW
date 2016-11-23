@@ -10,6 +10,7 @@ import com.umis.entity.Users;
 import com.umis.exception.UsersException;
 import com.umis.repository.UsersRepository;
 import com.umis.util.ExceptionCode;
+import com.umis.util.TokenManager;
 
 
 /*@Transactional 注解可以管理数据库事务 
@@ -92,10 +93,10 @@ public class UsersServiceImpl implements UsersService  {
     	usersRepository.delete(user);
     }
     
-/*
+
     @Override
     public String doLogin(String username, String password) throws UsersException {
-        Users user = usersRepository.findByUsername(username);
+        Users user = usersRepository.findByUserName(username);
         if (user == null) {
             throw new UsersException(ExceptionCode.User_Not_Found, "User Not Found");
         }
@@ -106,11 +107,9 @@ public class UsersServiceImpl implements UsersService  {
         TokenManager tokenManager = TokenManager.getInstance();
         return tokenManager.getToken(user);
     }
-*/
+
 
 
 	
-	public String doLogin(String username, String password) throws UsersException {
-		return null;
-	}	
+	
 }

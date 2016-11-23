@@ -165,6 +165,10 @@ public class UsersAll {
 		this.extraObtain = extraObtain;
 		this.level = level;
 	}
+
+	public UsersAll() {
+		// TODO Auto-generated constructor stub
+	}
     
     
     

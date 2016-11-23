@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.umis.entity.Users;
-/*
+
 public class TokenManager {
 
     private static final Long Second = 1000L;
@@ -35,7 +35,7 @@ public class TokenManager {
 
     public String getToken(Users user) {
         String username = user.getUserName();
-        Integer level = user.getStaff().getLevel();
+        Integer level = user.getLevel();
         Long currentTimeMillis = System.currentTimeMillis();
         if (tokenMap.containsKey(username)) {
             removeToken(username);
@@ -85,6 +85,11 @@ public class TokenManager {
             tokenMap.remove(username);
         }
     }
+    
+    
+    
+    
+    
 }
-*/
+
 

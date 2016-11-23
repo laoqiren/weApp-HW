@@ -7,6 +7,5 @@ import com.umis.entity.Users;
 
 public interface ExtraObtainRepository extends JpaRepository<ExtraObtain, Integer> {
 	
-	public Users findByUserNumber(String userNumber);
-
+	public ExtraObtain findByUserNumber(String userNumber);
 }

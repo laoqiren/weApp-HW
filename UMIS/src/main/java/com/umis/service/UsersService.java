@@ -236,5 +236,5 @@ public interface UsersService {
      *      "msg": "Wrong Password"
      *  }
      */
-    //public String doLogin(String username, String password) throws UsersException;
+    public String doLogin(String username, String password) throws UsersException;
 }

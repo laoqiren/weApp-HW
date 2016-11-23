@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.umis.entity.Users;
-/*
+
 public class UsersListResponse extends BaseResponse {
     private List<Users> userList;
 
@@ -22,15 +22,17 @@ public class UsersListResponse extends BaseResponse {
         
         for (Users user : userList) {
             Users tempUser = new Users();
-            //tempUser.setStaff(user.getStaff());
             tempUser.setPassWord("******");
-            tempUser.setUserEmail(user.getUserEmail());
+            tempUser.setUserAll(user.getUserAll());
             tempUser.setUserName(user.getUserName());
-            tempUser.setId_user(user.getId_user());
+            tempUser.setBirthDate(user.getBirthDate());
+            tempUser.setClassNumber(user.getClassNumber());
+            tempUser.setSex(user.getSex());
+            tempUser.setLevel(user.getLevel());
             this.userList.add(tempUser);
         }
         
     }
     
 }
-*/
+

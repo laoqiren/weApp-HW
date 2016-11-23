@@ -1,5 +1,5 @@
 package com.umis.reponse;
-/*
+
 public class TokenResponse extends BaseResponse {
     private String token;
     private Integer level;
@@ -36,4 +36,3 @@ public class TokenResponse extends BaseResponse {
         this.level = level;
     }
 }
-*/

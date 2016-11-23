@@ -40,10 +40,13 @@ public class Users {
 	@Column(name = "birthDate_user")
 	private String birthDate;
 	
-	 @Column(name = "sex_user")
-	    private String sex = "M";
+	@Column(name = "sex_user")
+	private String sex = "M";
+	
+	@Column(name = "level_user")
+	private Integer level;
 
-	@OneToOne(cascade = CascadeType.ALL)     
+	@OneToOne(cascade = CascadeType.ALL)     //主控类  
 	@JoinColumn(name = "userPhone", unique = true)
 	private UsersAll userAll;
 
@@ -114,8 +117,16 @@ public class Users {
 		this.userAll = userAll;
 	}
 
+	public Integer getLevel() {
+		return level;
+	}
+
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+
 	public Users(String userNumber, String userName, String passWord, String classNumber, String birthDate, String sex,
-			UsersAll userAll) {
+			Integer level, UsersAll userAll) {
 		super();
 		this.userNumber = userNumber;
 		this.userName = userName;
@@ -123,8 +134,11 @@ public class Users {
 		this.classNumber = classNumber;
 		this.birthDate = birthDate;
 		this.sex = sex;
+		this.level = level;
 		this.userAll = userAll;
 	}
+
+	
 	
 	
 

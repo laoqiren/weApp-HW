@@ -11,8 +11,8 @@ import com.umis.service.UsersService;
 @RestController
 public class UsersController {
 	
-	/*@Autowired
-	 private UsersService userService ;
+	@Autowired
+	private UsersService userService ;
 	
 	@RequestMapping(value="/adduser")
 	public String addUsers() throws UsersException{
@@ -44,6 +44,6 @@ public class UsersController {
 			
 		
 		//return "failed";
-	}*/
+	}
 	
 }

@@ -213,6 +213,10 @@ public class ExtraObtain {
 		this.socialAward4 = socialAward4;
 		this.userAll = userAll;
 	}
+
+	public ExtraObtain() {
+		// TODO Auto-generated constructor stub
+	}
 	 
 	 
 	 

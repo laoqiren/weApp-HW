@@ -7,6 +7,6 @@ import com.umis.entity.UsersAll;
 
 public interface UsersAllRepository extends JpaRepository<UsersAll, Integer> {
 	
-	public Users findByUserPhone(String userPhone);
+	public UsersAll findByUserPhone(String userPhone);
 
 }
